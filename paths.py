@@ -11,4 +11,4 @@ def get_game_directory():
             result = Path.home() / path / folder
             break
             
-    return result
+    return str(result)

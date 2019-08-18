@@ -1,11 +1,13 @@
 from pathlib import Path
 import requests
 
-from paths import get_game_directory
+from confighelper import game_directory
 from urls import get_latest_download_url
 
 org = "AeroScripts"
 repo = "QuestieDev"
+
+gamedir = game_directory()
 
 url = get_latest_download_url(org, repo)
 filename = f"addons/{Path(url).name}"
